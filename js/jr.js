@@ -162,7 +162,7 @@ jr.run = function(markdownContent) {
 
 	// Load the footer (if any)
 	ajax('footer.html', function(x) {
-		if(x) {
+		if(x && XMLHttpRequest.status == 200) {
 			document.getElementsByTagName('footer')[0].innerHTML = x;
 		}
 	});
@@ -211,9 +211,13 @@ function ajax(url, callback, data)
 
 	// Load the article
 	jr.body = document.getElementsByTagName("body")[0];
+	var pre = document.getElementsByTagName("pre")[0];
 
 	// Save the markdown for after we load the parser
 	jr.markdownContent = jr.body.innerHTML;
+	if (pre) {
+		jr.markdownContent = pre.innerHTML;
+	}
 
 	// Empty the content in case it takes a while to parse the markdown (leaves a blank screen)
 	jr.body.innerHTML = '<div class="spinner"></div>';

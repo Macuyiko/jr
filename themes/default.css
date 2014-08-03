@@ -1,8 +1,3 @@
-/*
- * Based on Mark Otto's (@mdo) "Poole"
- * @see https://github.com/poole/poole
- */
-
 * {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
@@ -23,7 +18,7 @@ html {
 
 
 body {
-	color: #515151;
+	color: #111111;
 	background-color: #fff;
 	-webkit-text-size-adjust: 100%;
 	-ms-text-size-adjust: 100%;
@@ -213,10 +208,10 @@ tbody tr:nth-child(odd) th {
 /* Structure and Theme */
 
 body > div {
-	border-top: 60px solid #BAF1FF;
+	border-top: 60px solid #B80000;
 }
 
-main, footer {
+main {
 	padding: 2em;
 }
 
