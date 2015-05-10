@@ -1,0 +1,56 @@
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+html > body > pre {
+	margin: 0 auto;
+	padding: 2em;
+	width: 600px;
+	
+	font-family: Menlo, Monaco, 'Consolas', 'Courier New', monospace;
+	font-size: 14px;
+	line-height: 1.5;
+
+	border-top: 60px solid #EFEFEF;
+
+	color: #111111;
+	background-color: #fff;
+
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+
+	white-space: pre-wrap;       /* css-3 */
+	white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+	white-space: -pre-wrap;      /* Opera 4-6 */
+	white-space: -o-pre-wrap;    /* Opera 7 */
+	word-wrap: break-word;       /* Internet Explorer 5.5+ */
+}
+
+img {
+	display: block;
+	margin: 0 0 1rem;
+	max-width: 100%; height:auto;
+}
+
+iframe {
+	max-width: 100%;
+}
+
+img.screenshot {
+	display: none;
+}
+
+span.screenshot {
+	white-space: nowrap;
+}
+
+span.screenshot:before {
+    content: attr(data-alt);
+    white-space: nowrap;
+}
+
+.lightbox {
+  display: none;
+}

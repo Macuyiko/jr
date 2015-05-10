@@ -4,8 +4,7 @@
 	box-sizing: border-box;
 }
 
-html,
-body {
+html, body {
 	margin: 0;
 	padding: 0;
 }
@@ -16,7 +15,6 @@ html {
 	line-height: 1.5;
 }
 
-
 body {
 	color: #111111;
 	background-color: #fff;
@@ -24,42 +22,41 @@ body {
 	-ms-text-size-adjust: 100%;
 }
 
-/* No `:visited` state is required by default (browsers will use `a`) */
 a {
 	color: #268bd2;
 	color: #4D8FA8;
 	text-decoration: none;
 }
-/* `:focus` is linked to `:hover` for basic accessibility */
-a:hover,
-a:focus {
+a:hover, a:focus {
 	text-decoration: underline;
 }
 
-/* Headings */
 h1, h2, h3, h4, h5, h6 {
 	line-height: 1.25;
 	color: #313131;
 	text-rendering: optimizeLegibility;
-	font-family: 'Roboto', "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-family: 'Average Sans', 'Roboto', "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
+
 h1 {
 	font-size: 2rem;
 }
+
 h2 {
-	margin-top: 1rem;
+	margin-top: 2.0rem;
 	font-size: 1.5rem;
 }
+
 h3 {
 	margin-top: 1.5rem;
 	font-size: 1.25rem;
 }
+
 h4, h5, h6 {
-	margin-top: 1rem;
+	margin-top: 1.25rem;
 	font-size: 1rem;
 }
 
-/* Body text */
 p {
 	margin-top: 0;
 	margin-bottom: 1rem;
@@ -70,10 +67,14 @@ strong {
 }
 
 
-/* Lists */
+ul {
+	list-style-type: square;
+}
+
 ul, ol, dl {
 	margin-top: 0;
 	margin-bottom: 1rem;
+	font-size: .8rem;
 }
 
 dt {
@@ -83,17 +84,15 @@ dd {
 	margin-bottom: .5rem;
 }
 
-/* Misc */
 hr {
 	margin: 1.5rem 0;
 	border-top: 1px solid #f8f8f8;
 }
 
-/* Code */
-code,
-pre {
-	font-family: Menlo, Monaco, "Courier New", monospace;
+code, pre {
+	font-family: Menlo, Monaco, 'Consolas', 'Courier New', monospace;
 }
+
 code {
 	padding: .25em .5em;
 	font-size: 85%;
@@ -101,6 +100,7 @@ code {
 	background-color: #f9f9f9;
 	border-radius: 3px;
 }
+
 pre {
 	display: block;
 	margin-top: 0;
@@ -114,30 +114,34 @@ pre {
 	word-wrap: break-word;
 	background-color: #f9f9f9;
 }
+
 pre code {
 	padding: 0;
 	font-size: 100%;
 	color: inherit;
 	background-color: transparent;
 }
+
 .highlight {
 	margin-bottom: 1rem;
 	border-radius: 4px;
 }
+
 .highlight pre {
 	margin-bottom: 0;
 }
 
-/* Quotes */
 blockquote {
 	padding: .5rem 1rem;
 	margin: .8rem 0;
 	color: #7a7a7a;
 	border-left: .25rem solid #e5e5e5;
 }
+
 blockquote p:last-child {
 	margin-bottom: 0;
 }
+
 @media (min-width: 30rem) {
 	blockquote {
 		padding-right: 5rem;
@@ -148,10 +152,13 @@ blockquote p:last-child {
 img {
 	display: block;
 	margin: 0 0 1rem;
-	border-radius: 3px;
+	max-width:100%; height:auto;
 }
 
-/* Tables */
+iframe {
+	max-width:100%;
+}
+
 table {
 	margin-bottom: 1rem;
 	width: 100%;
@@ -168,7 +175,6 @@ tbody tr:nth-child(odd) th {
 	background-color: #f9f9f9;
 }
 
-/* AJAX Loader */
 .spinner {
 	height:60px;
 	width:60px;
@@ -205,12 +211,6 @@ tbody tr:nth-child(odd) th {
 	to {transform: rotate(359deg);}
 }
 
-/* Structure and Theme */
-
-body > div {
-	border-top: 60px solid #B80000;
-}
-
 main {
 	padding: 2em;
 }
@@ -227,18 +227,9 @@ main {
 		padding: 1em 0;
 	}
 
-	main article,
-	footer section {
+	main article, footer section {
 		max-width: 600px;
 		margin: 0 auto;
-	}
-
-	footer section {
-		font-size: .65em;
-	}
-
-	footer, footer h3 {
-		font-family: sans-serif;
 	}
 }
 
@@ -250,18 +241,40 @@ main {
 	font-size: 1em;
 }
 
-footer { 
-	background: #333;
-}
-
-footer, footer h3 {
-	color: #ccc;
-	font-weight: normal;
-}
-
-footer img {
+.title {
+	font-size: 1.6rem;
+	font-weight: 600;
+	max-width: 600px;
 	margin: 0 auto;
-	border: 3px solid #fff;
+}
+
+.subtitle {
+	font-size: 0.8rem;
+	font-weight: 600;
+	max-width: 600px;
+	margin: 0 auto;
+}
+
+header {
+	padding: 1rem 0;
+	font-family: 'Average Sans', 'Roboto', "Helvetica Neue", Helvetica, Arial, sans-serif;
+	color: #fff;
+	background: #2b8c82;
+}
+
+header a {
+	color: #fff;
+	text-decoration: underline;
+}
+
+footer {
+	clear: both;
+	padding: 2rem 8rem;
+	font-size: 0.75rem;
+	font-weight: 300;
+	font-family: 'Average Sans', 'Roboto', "Helvetica Neue", Helvetica, Arial, sans-serif;
+	color: #ccc;
+	background: #333;
 }
 
 footer a {
@@ -269,21 +282,136 @@ footer a {
 	text-decoration: underline;
 }
 
-footer aside img {
+.clearfix { clear: both; }
+
+img.screenshot {
+	display: block;
 	float: left;
-	margin: 0 1em 1em 0;
+	padding: 0.25rem;
+	border: 1px solid #ccc;
+	margin: 0.5rem;
+	height: auto;
+	width: 45%;
 }
 
-footer ul {
-	list-style: none;
-	padding: 0;
-	margin: 0;
+span.screenshot {
+	white-space: nowrap;
 }
 
-footer ul li {
-	padding: 1em 0 0 0;
+span.screenshot:before {
+    content: '';
+    white-space: nowrap;
 }
 
-footer ul li:before {
-		content: "\2192 \0020"; /* caractýre UTF-8 */
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.8);
+  opacity: 0;
+  -webkit-transition: opacity .5s ease-in-out;
+  -moz-transition: opacity .5s ease-in-out;
+  -o-transition: opacity .5s ease-in-out;
+  transition: opacity .5s ease-in-out;
+  overflow: hidden;
+}
+
+.lightbox img {
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  max-height: 0%;
+  max-width: 0%;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+  box-sizing: border-box;
+  -webkit-transition: .5s ease-in-out;
+  -moz-transition: .5s ease-in-out;
+  -o-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+}
+
+.lightbox-cover {
+  display: block;
+  z-index: 1998;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  text-decoration: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  overflow: hidden;
+}
+
+.lightbox-close {
+  display: block;
+  z-index: 1999;
+  width: 50px;
+  height: 50px;
+  box-sizing: border-box;
+  background: white;
+  color: black;
+  text-decoration: none;
+  position: absolute;
+  top: -80px;
+  right: 0;
+  -webkit-transition: .5s ease-in-out;
+  -moz-transition: .5s ease-in-out;
+  -o-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+}
+
+.lightbox-close:before {
+  content: "";
+  display: block;
+  height: 30px;
+  width: 1px;
+  background: black;
+  position: absolute;
+  left: 26px;
+  top: 10px;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.lightbox-close:after {
+  content: "";
+  display: block;
+  height: 30px;
+  width: 1px;
+  background: black;
+  position: absolute;
+  left: 26px;
+  top: 10px;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.lightbox:target {
+  outline: none;
+  display: block;
+  opacity: 1;
+  top: 0;
+  bottom: 0;
+}
+
+.lightbox:target img {
+  max-height: 80%;
+  max-width: 90%;
+}
+
+.lightbox:target .lightbox-close {
+  top: 0px;
 }

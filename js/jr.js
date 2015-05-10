@@ -6,14 +6,13 @@ var jr = {
 	markdownContent: null,
 	plugins: {}, // Defined below
 	styles : [
-		'themes/default.css',
+		'/junior/themes/default.css',
 		'//fonts.googleapis.com/css?family=Average',
+		'//fonts.googleapis.com/css?family=Average Sans',
 		'//fonts.googleapis.com/css?family=Roboto:400,700'
 	],
 	scripts : [
-		'js/showdown.js'
-		// if you want jQuery or some other library for a plugin
-		// '//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js'
+		'/junior/js/showdown.js'
 	],
 };
 
@@ -156,14 +155,19 @@ jr.run = function(markdownContent) {
 	var html = converter.makeHtml(markdownContent);
 
 	// Basic HTML5 shell wrapped in a div
-	jr.body.innerHTML = '<div><main role="main">\
+	jr.body.innerHTML = '<div><header></header>\
+		<main role="main">\
 		<article>' + html + '</article>\
-	</main><footer></footer></div>';
+		</main><footer></footer></div>';
 
-	// Load the footer (if any)
-	ajax('footer.html', function(x) {
-		if(x && XMLHttpRequest.status == 200) {
-			document.getElementsByTagName('footer')[0].innerHTML = x;
+	ajax('header.html', function(xt, x) {
+		if(xt && x && x.status == 200) {
+			document.getElementsByTagName('header')[0].innerHTML = xt;
+		}
+	});
+	ajax('footer.html', function(xt, x) {
+		if(xt && x && x.status == 200) {
+			document.getElementsByTagName('footer')[0].innerHTML = xt;
 		}
 	});
 
@@ -233,7 +237,7 @@ function ajax(url, callback, data)
 
 	jr.fireWhenReady();
 
-	// If you want to see the pritty AJAX-spinner...
-	//setTimeout(jr.fireWhenReady, 1000);
+	// If you want to see the pretty AJAX-spinner...
+	// setTimeout(jr.fireWhenReady, 1000);
 
 })();

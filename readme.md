@@ -4,6 +4,6 @@ A static, static content generator that moves the "generator" part to the browse
 This site is pure text files with a single Javascript included on each page that renders
 the theme and assets as needed.
 
-This fork makes some small changes to the original source to make make the bare-bones pages somewhat more standards compliant by adding a html skeleton.
+**This fork** makes some small changes to the original source to make make the bare-bones pages somewhat more standards compliant by adding a html skeleton, a fallback style sheet for people with Javascript disabled, and be allowing header and footer pages to be set.
 
-Demo can be seen on this prototype download website for a conference paper: http://processmining.be/locationaware
+Demo can be seen on this website: http://processmining.be/fodina (view source or disable Javascript to inspect the effects)
