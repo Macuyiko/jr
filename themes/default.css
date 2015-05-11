@@ -211,7 +211,7 @@ tbody tr:nth-child(odd) th {
 	to {transform: rotate(359deg);}
 }
 
-main {
+.main {
 	padding: 2em;
 }
 
@@ -221,13 +221,13 @@ main {
 		font-size: 20px;
 	}
 
-	main, footer { padding: 3em auto; }
+	.main, footer { padding: 3em auto; }
 
-	main article h1 { 
+	.main h1 { 
 		padding: 1em 0;
 	}
 
-	main article, footer section {
+	.main, footer section {
 		max-width: 600px;
 		margin: 0 auto;
 	}
@@ -249,7 +249,7 @@ main {
 }
 
 .subtitle {
-	font-size: 0.8rem;
+	font-size: 0.75rem;
 	font-weight: 600;
 	max-width: 600px;
 	margin: 0 auto;

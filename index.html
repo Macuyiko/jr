@@ -2,17 +2,30 @@
 <html>
 <head>
 	<meta charset=utf-8 />
-	<title>Junior Example Site</title>
-	<link rel="stylesheet" type="text/css" href="/junior/fallback.css">
+	<title>Rendering static websites in the browser with a jr.js modification</title>
+	<link rel="stylesheet" type="text/css" href="/fallback.css">
 </head>
-<body><pre>
+<body>
 
-Junior Example Site
-===================
+<header data-include='/header.html'></header>
 
-Put you Markdown code here. It's recommended to put `fallback.css` in the head, as this contains some basic styles which will be applied for users who have JS disabled (the page will display Markdown code with minimal formatting).
+<pre class="main" data-renderjunior="data-renderjunior">
+Put your markdown here.
+
+# Header
+
+* List 1
+* List 3
+
+   Code here
+
+## The end
+</pre>
+
+<footer data-include='/footer.html'></footer>
 
 <script src="/junior/js/jr.js"></script>
+<script src="/junior/js/include.js"></script>
 
-</pre></body>
+</body>
 </html>
